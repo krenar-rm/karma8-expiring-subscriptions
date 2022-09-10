@@ -7,7 +7,7 @@
 Команды
 --------
 
-```app:send-notifications-about-expiring-subscription```
+```php bin/console app:send-notifications-about-expiring-subscription```
 
 Запуск тестов
 --------
