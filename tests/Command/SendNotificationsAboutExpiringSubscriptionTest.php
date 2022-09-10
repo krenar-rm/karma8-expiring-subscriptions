@@ -95,7 +95,9 @@ class SendNotificationsAboutExpiringSubscriptionTest extends CommandTestCase
         $userSubscription = new UsersSubscription();
         $userSubscription
             ->setUser($user)
-            ->setValidts((new \DateTime())->modify('-2 hours')->getTimestamp());
+            ->setValidts((new \DateTime())->modify('-1 days 1 hour')->getTimestamp());
+
+        var_dump(date('Y-m-d H:i:s', $userSubscription->getValidts())); //die;
 
         $this->userSubscriptionRepository->add($userSubscription, true);
 

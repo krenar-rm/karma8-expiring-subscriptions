@@ -43,9 +43,9 @@ class SendNotificationsAboutExpiringSubscription extends Command
 
     protected function execute(InputInterface $input, OutputInterface $output): int
     {
-        $from = new \DateTimeImmutable('-5 day');
+        $from = new \DateTimeImmutable('-1 day');
         $from = $from->setTime(0, 0, 0);
-        $to = new \DateTimeImmutable('- 1 day');
+        $to = new \DateTimeImmutable();
         $to = $to->setTime(0, 0, 0);
 
         $output->writeln($from->format('Y-m-d H:i:s'));
